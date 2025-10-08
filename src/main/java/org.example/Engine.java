@@ -24,4 +24,6 @@ public class Engine {
     public void setEngineType(String engineType) {
         this.engineType = engineType;
     }
+
+    public void display() { System.out.println("Engine type : " + engineType + " Engine power : " + enginePower); }
 }

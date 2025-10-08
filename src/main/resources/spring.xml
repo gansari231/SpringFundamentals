@@ -12,9 +12,19 @@
            https://www.springframework.org/schema/aop/spring-aop.xsd
            http://www.springframework.org/schema/tx">
 
-    <bean class="org.example.Engine">
+    <bean class="org.example.Engine" id="engine1">
         <constructor-arg value="V8"></constructor-arg>
         <constructor-arg value="Petrol"></constructor-arg>
+    </bean>
+
+    <bean class="org.example.Engine" id="engine2">
+        <constructor-arg value="V7"></constructor-arg>
+        <constructor-arg value="Electric"></constructor-arg>
+    </bean>
+
+    <bean class="org.example.Car">
+        <constructor-arg value="SUV"></constructor-arg>
+        <constructor-arg ref="engine1"></constructor-arg>
     </bean>
 
 </beans>

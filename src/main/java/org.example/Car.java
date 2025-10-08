@@ -24,4 +24,9 @@ public class Car {
     public void setCarType(String carType) {
         this.carType = carType;
     }
+
+    public void startCar() {
+        System.out.println("CarType : " + carType);
+        engine.display();
+    }
 }
