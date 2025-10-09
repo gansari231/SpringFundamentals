@@ -9,11 +9,11 @@ public class Main {
         //ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfig.class);
 
-        Engine engine = applicationContext.getBean("engine1", Engine.class);
-        Engine engine2 = applicationContext.getBean("engine2", Engine.class);
+        /*Engine engine = applicationContext.getBean(Engine.class);
+        Engine engine2 = applicationContext.getBean(Engine.class);
 
         System.out.println(engine.hashCode());
-        System.out.println(engine2.hashCode());
+        System.out.println(engine2.hashCode());*/
 
         Car car = applicationContext.getBean(Car.class);
         car.startCar();

@@ -1,11 +1,19 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Car {
 
+    @Autowired
+    @Qualifier("petrolEngine")
     private Engine engine;
     private String carType;
 
-    public Car(Engine engine, String carType) {
+    public Car(@Qualifier("petrolEngine") Engine engine, @Value("${carType}")String carType) {
         this.engine = engine;
         this.carType = carType;
     }
